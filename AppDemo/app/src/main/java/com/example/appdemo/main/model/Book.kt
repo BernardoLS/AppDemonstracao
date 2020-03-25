@@ -7,5 +7,7 @@ data class Book(
     val author: String = "",
     val synopsis: String = "",
     val thumb: String = "",
-    val publicationYear: String = ""
+    val publicationYear: Int = 0,
+    val publisher: String = "",
+    val pageCount: Int = 0
 ): Serializable
