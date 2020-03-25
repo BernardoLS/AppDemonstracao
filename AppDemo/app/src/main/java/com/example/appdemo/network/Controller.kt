@@ -7,7 +7,6 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 const val test = "https://gist.githubusercontent.com/BernardoLS/3019125c025b95576d77346fcc106274/raw/03872dfdb62bd91c33b361b6742560e273a152d7/"
-const val testApi = "https://api.themoviedb.org/3/"
 object Controller {
 
     private val okHttpClient = OkHttpClient.Builder()
@@ -18,7 +17,7 @@ object Controller {
 
     val retrofit: Retrofit = Retrofit.Builder()
         .client(okHttpClient)
-        .baseUrl(test)
+        .baseUrl(BuildConfig.SERVER_URL)
         .addConverterFactory(GsonConverterFactory.create())
         .build()
 }

@@ -10,11 +10,11 @@ class MainViewModel(val mainNetwork: MainNetwork): ViewModel() {
 
     val showError = MutableLiveData<Boolean>()
     val showLoader = MutableLiveData<Boolean>()
-    val booklists = MutableLiveData<List<BookList>>()
+    val booklists = MutableLiveData<ArrayList<BookList>>()
 
     fun getBookList() {
         mainNetwork.getBookLists { result ->
-            println("ninja - ${result.data}")
+            println("ninja - ${result}")
 
             when(result.status) {
                 Status.SUCCESS -> {
