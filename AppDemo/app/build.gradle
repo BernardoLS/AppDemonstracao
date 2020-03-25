@@ -21,10 +21,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "SERVER_URL", '"https://api.themoviedb.org/3/"')
+            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/882496705cdc00345f18d0a2c714f556/raw/23d45545d08ad03f81feeb5df8061b64a7ddcf91/"')
         }
         debug {
-            buildConfigField("String", "SERVER_URL", '"https://api.themoviedb.org/3/"')
+            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/882496705cdc00345f18d0a2c714f556/raw/23d45545d08ad03f81feeb5df8061b64a7ddcf91/"')
         }
     }
 
