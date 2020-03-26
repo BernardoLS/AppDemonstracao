@@ -21,10 +21,10 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/3019125c025b95576d77346fcc106274/raw/03872dfdb62bd91c33b361b6742560e273a152d7/"')
+            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/705818434b1385532aa64d263e13183d/raw/f6a94f50fee1ef5e1ca50c5a8c014934c437974c/"')
         }
         debug {
-            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/3019125c025b95576d77346fcc106274/raw/03872dfdb62bd91c33b361b6742560e273a152d7/"')
+            buildConfigField("String", "SERVER_URL", '"https://gist.githubusercontent.com/BernardoLS/705818434b1385532aa64d263e13183d/raw/f6a94f50fee1ef5e1ca50c5a8c014934c437974c/"')
         }
     }
 

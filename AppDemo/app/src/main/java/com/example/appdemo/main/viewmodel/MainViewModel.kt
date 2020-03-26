@@ -14,8 +14,6 @@ class MainViewModel(val mainNetwork: MainNetwork): ViewModel() {
 
     fun getBookList() {
         mainNetwork.getBookLists { result ->
-            println("ninja - ${result}")
-
             when(result.status) {
                 Status.SUCCESS -> {
                     booklists.postValue(result.data)

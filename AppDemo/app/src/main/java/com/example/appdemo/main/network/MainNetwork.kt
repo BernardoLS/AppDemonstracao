@@ -17,12 +17,10 @@ class MainNetwork(private val dispatcher: CoroutineDispatcher){
     fun getBookLists(listener: (LiveDataResult<ArrayList<BookList>>) -> Unit) {
         CoroutineScope(dispatcher).launchSafe(
             {
-                println("ninjaaaa $it")
                 listener(LiveDataResult.error(it))
             },
             {
                 val request = api.getBookLists()
-                println("ninja nt - ${request.body()}")
                 listener(DefaultNetwork.request(request, TAG))
             }
         )
@@ -30,6 +28,6 @@ class MainNetwork(private val dispatcher: CoroutineDispatcher){
 }
 
 interface BookListApi {
-    @GET("book.json")
+    @GET("bookListMockv3.json")
     suspend fun getBookLists(): Response<ArrayList<BookList>>
 }

@@ -14,7 +14,7 @@ private const val ITEM_BOOK_LIST = 1
 
 private val recycledViewPool = RecyclerView.RecycledViewPool()
 
-class BookListAdapter(var lists: ArrayList<BookList>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class BookListAdapter(var lists: ArrayList<BookList> = arrayListOf()) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return when(viewType) {
             ITEM_BOOK_LIST -> ItemBookListViewHolder(LayoutInflater.from(parent.context)
