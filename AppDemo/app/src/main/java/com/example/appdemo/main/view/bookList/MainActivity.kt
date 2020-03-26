@@ -1,7 +1,8 @@
-package com.example.appdemo.main.view
+package com.example.appdemo.main.view.bookList
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.example.appdemo.R
@@ -31,14 +32,14 @@ class MainActivity : AppCompatActivity() {
             if(bookLists.isNullOrEmpty()) {
                 return@Observer
             } else {
-                val list = bookLists[0]
-                text_teste.text = list.nome
+                progress_main.visibility = View.GONE
+                //adapter.addLists(bookLists)
             }
         })
 
         viewModel.showError.observe(this, Observer { error ->
             if (error) {
-                text_teste.text = "Deu ruim, tente outra vez"
+                progress_main.visibility = View.GONE
             }
         })
     }

@@ -1,4 +1,4 @@
-package com.example.appdemo.main.view
+package com.example.appdemo.main.view.book
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
